@@ -1,0 +1,20 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Hi! I am Parent</h2>
+        Message from child1 (using viewchild): {{ message }}
+        <br>
+        Message from child2 (using output): {{message2}}
+        <app-child [ChildMessage]="parentMessage"></app-child>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-12">
+            
+            <app-child2 (messageEvent)="receiveMessage($event)"></app-child2>
+        </div>
+    </div>
+  <hr> 
+
+  
